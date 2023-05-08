@@ -1,0 +1,19 @@
+defmodule Solution do
+  @spec diagonal_sum(mat :: [[integer]]) :: integer
+  def diagonal_sum(mat) do
+    # calculate sum of diagonal elements
+    # return sum
+
+
+     sum_1 = Enum.reduce(1..length(mat), 0, fn i, acc ->
+       acc + Enum.at(Enum.at(mat, i - 1), i - 1)
+     end)
+
+     sum_2 = Enum.reduce(0..(length(mat) - 1), 0, fn i, acc ->
+       acc + Enum.at(Enum.at(mat, length(mat) - i - 1), i)
+     end)
+
+     IO.puts sum_1
+     IO.puts sum_2
+  end
+end
