@@ -4,16 +4,6 @@ defmodule Solution do
     # calculate sum of diagonal elements
     # return sum
 
-    """
-     sum_1 = Enum.reduce(1..length(mat), 0, fn i, acc ->
-       acc + Enum.at(Enum.at(mat, i - 1), i - 1)
-     end)
-
-     sum_2 = Enum.reduce(0..(length(mat) - 1), 0, fn i, acc ->
-       acc + Enum.at(Enum.at(mat, length(mat) - i - 1), i)
-     end)
-
-      """
 
       sum_1_2 = Enum.reduce(0..length(mat) - 1, 0, fn i, acc ->
         acc + Enum.at(Enum.at(mat, i), i) + Enum.at(Enum.at(mat, length(mat) - i - 1), i)
