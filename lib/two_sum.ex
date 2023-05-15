@@ -11,7 +11,6 @@ defmodule TwoSum do
   If number is in the map, return the index of the number and the value of the map.
   If number is not in the map, add the number as the key and the index as the value.
   """
-
   def two_sum(nums, target) do
     Enum.reduce_while(nums, {%{}, 0}, fn n, {map, i} ->
        complement = Map.get(map, target - n)

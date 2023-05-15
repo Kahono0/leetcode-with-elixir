@@ -3,6 +3,6 @@ defmodule LeetcodeTest do
   doctest Leetcode
 
   test "greets the world" do
-    assert Leetcode.hello() == :world
+    assert Leetcode.hello() == :wod
   end
 end
