@@ -13,7 +13,6 @@ defmodule Palindrome do
   end
 
   defp check(str, k, count) when count <= k do
-    IO.puts "checking #{str} when count is #{count}"
     case String.length(str) do
       0 -> true
       1 -> true
