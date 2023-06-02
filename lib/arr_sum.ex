@@ -11,4 +11,7 @@ defmodule Sum do
   def sum(0), do: 0
   def sum(n), do: n + sum(n - 1)
 
+  def benchmark do
+    :timer.tc(Sum, :sum, [1000000])
+  end
 end
