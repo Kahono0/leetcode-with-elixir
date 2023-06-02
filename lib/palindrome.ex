@@ -4,39 +4,6 @@ defmodule Palindrome do
   Given a string which we can delete at most k, return whether you can make a palindrome.
   """
 
-  """
-  @spec is_palindrome(String.t(), integer) :: boolean
-  def is_palindrome(str, k) do
-    count = 0
-    0..k-1
-    |> Enum.each(fn x ->
-      if count > k do
-        {:halt, count}
-      end
-      case Enum.at(str,x) == Enum.at(str, -x-1) do
-        true -> count = count
-        false -> count = count + 1
-      end
-    end)
-  end
-  """
-
-  def is_palindrome(str, k) do
-    count = 0
-    0..k-1
-    |> Enum.each(fn x ->
-      case String.at(str,x) == String.at(str, -x-1) do
-        true -> count = count |> IO.puts "checking #{String.at(str,x)} and #{String.at(str, -x-1)}"
-        false -> count = count + 1
-      end
-    end)
-    if count > k do
-      false
-    else
-      true
-    end
-  end
-
   def check(str, k) do
     check(str, k, 0)
   end
